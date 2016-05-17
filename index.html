@@ -60,7 +60,25 @@ var STYLE_PREFIX = 'wsite';
 <script type="text/javascript" src="./Richard_He_Files/stl.js"></script><script> _W.themePlugins = [];</script><script type="text/javascript"><!--
 	
 	
-
+	(function(jQuery){
+		function initFlyouts(){
+			initPublishedFlyoutMenus(
+				[{"id":"365322480489174627","title":"Facebook","url":"https:\/\/www.facebook.com\/heyucheng96","target":""},{"id":"623749387234667357","title":"LinkedIn","url":"https:\/\/www.linkedin.com\/in\/yuchenghe","target":""},{"id":"449704757353474393","title":"Email","url":"https:\/\/search.rice.edu\/people\/detail\/html\/EWg0Mw%3D%3D\/","target":""},{"id":"623749387234667377","title":"About","url":".\/about.html","target":""}],
+				"146864643929175569",
+				'',
+				'active',
+				false,
+				{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-item-wrap\"\n\t>\n\t<a href=\"{{url}}\"\n\t\t{{#target}}target=\"{{target}}\"{{\/target}}\n\t\tclass=\"wsite-menu-item\"\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a href=\"{{url}}\"\n\t\t{{#target}}target=\"{{target}}\"{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+				{}
+			)
+		}
+		if (jQuery) {
+			jQuery(document).ready(function() { jQuery(initFlyouts); });
+		}else{
+			if (Prototype.Browser.IE) window.onload = initFlyouts;
+			else document.observe('dom:loaded', initFlyouts);
+		}
+	})(window._W && _W.jQuery)
 //-->
 </script>
 		
@@ -71,7 +89,6 @@ var STYLE_PREFIX = 'wsite';
                 <div class="container">
                     <div class="logo"><span class="wsite-logo">
 
-	
 	<span class="wsite-title-placeholder">&nbsp;</span><span style="display:none">
 	<span style="display:none">Yucheng (Richard) He</span>
 	</span>
@@ -116,13 +133,21 @@ var STYLE_PREFIX = 'wsite';
     			<div class="content-wrap">
                     <div class="splash-content">
                         <div id="wsite-content" class="wsite-elements wsite-not-footer">
-<div class="wsite-spacer" style="height:195px;"></div>
+<div class="wsite-spacer" style="height:1px;"></div>
 
-<h2 class="wsite-content-title" style="text-align:center;"><font size="7">Yucheng (Richard) He</font></h2>
+<h2 class="wsite-content-title" style="text-align:center;">
+	<div class="container-info">
+		<a name="top-mobile"></a>
+		<div class="info-main">
+			<div class="info__headshot"><img class="info__headshot-img" src="Richard_He_Images/personal_pic.jpg"></div>
+		</div>
+	</div>
+	<font size="7">Yucheng (Richard) He</font>
+</h2>
 
-<div style="text-align:center;"><div style="height:10px;overflow:hidden"></div>
+<div style="text-align:center;"><div style="height:20px;overflow:hidden"></div>
 <span class="wsite-social wsite-social-default"><a class="first-child wsite-social-item wsite-social-facebook" href="https://www.facebook.com/heyucheng96" target="_blank"><span class="wsite-social-item-inner"></span></a><a class="wsite-social-item wsite-social-linkedin" href="https://www.linkedin.com/in/yuchenghe" target="_blank"><span class="wsite-social-item-inner"></span></a><a class="last-child wsite-social-item wsite-social-mail" href="mailto:yucheng.he@rice.edu" target="_blank"><span class="wsite-social-item-inner"></span></a></span>
-<div style="height:10px;overflow:hidden"></div></div></div>
+<div style="height:100px;overflow:hidden"></div></div></div>
 
                     </div>
                 </div>
