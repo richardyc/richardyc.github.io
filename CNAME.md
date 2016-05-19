@@ -1,1 +1,1 @@
-www.heyucheng.com
+heyucheng.com
