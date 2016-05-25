@@ -1,12 +1,45 @@
 @charset "UTF-8";
 
-body {
+body{
 	margin: 0;
 	padding: 0;
+padding-top:50px;
 	background-color: #ffffff;
+
 }
 .title {
 	color: #101010;
 	padding-top: 50px;
 	margin-bottom: 50px;
+}
+
+.top-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	min-height: 40px;
+	line-height: 25px;
+	background: #0D8;
+	padding: 7px 15px; 
+	z-index: 1000;
+}
+.top-bar a {
+color: #000;
+	text-decoration: none;
+	display: inline-block;
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+.top-bar a:hover {
+	color: #fff;
+}
+.top-bar a.left-link {
+	float: left;
+}
+.top-bar a.right-link {
+	float: right;
 }
