@@ -1,2 +1,2 @@
-# heyucheng.com
+# hrichard.com
 Personal website
