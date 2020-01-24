@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: hrichard.com
+Token: fe0545a792989b70931342ccff126471f1a1b44029fcccedd6996dd998296564
