@@ -1,0 +1,9 @@
+# Site settings
+title: Richard He Website
+author: Richard He
+email: he@hrichard.com
+baseurl: ""
+url: "https://hrichard.com/" # the base hostname & protocol for your site
+github_username:  richardyc
+
+include: [".well-known"]
